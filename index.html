@@ -43,7 +43,7 @@
 	
 	
 </head>
-<body>
+<body  id="home">
 	<div class="navbar-fixed">
 	<nav class="blue">
 		<div class="nav-wrapper blue container">
@@ -53,12 +53,14 @@
 				<li><a href="#home">Home</a></li>
 				<li><a href="#intro">Introduction</a></li>
 				<li><a href="#events">Events</a></li>
+				<li><a href="#contact">Contact Us</a></li>
 				<li><a class="modal-trigger btn white blue-text waves-effect" href="#register">Register</a></li>
 			</ul>
 			<ul class="side-nav" id="mobile-demo">
 				<li><a href="#home">Home</a></li>
 				<li><a href="#intro">Introduction</a></li>
 				<li><a href="#events">Events</a></li>
+				<li><a href="#contact">Contact Us</a></li>
 				<li><a class="modal-trigger blue white-text" href="#register">Register</a></li>
 			</ul>			
 		</div>
@@ -143,7 +145,7 @@
 		</div>
 		</div>
 	
-	<div class="parallax-container" id="home">
+	<div class="parallax-container">
 		<div class="container" class="section no-pad-bot">
 			<h1 class="header center white-text"><br></br>IEEE R&D Expo</h1>
 			<div class="row center">
@@ -186,6 +188,42 @@
             </div>
 		</div>
 	</div>
+	<div class="parallax-container" id="contact">
+		<div class="container row">
+            <h2 class="header">Contact Us</h2>
+
+			<form class="col s12">
+				<div class="col s9">
+					<div class="input-field">
+						<input id="email2" type="email" class="validate">
+						<label for="email2">Your Email Id</label>
+					</div>
+				</div>
+				<div class="col s9">
+					<div class="input-field">
+						<input id="subject" type="text" class="validate">
+						<label for="subject">Subject</label>
+					</div>
+				</div>
+				<div class="input-field col s12">
+					<textarea id="content" class="materialize-textarea"></textarea>
+					<label for="content">Message</label>
+				</div>
+				<div class="input-field col s12">
+					<a class="btn-large blue white-text waves-effect waves-light">Send</a>
+				</div>
+			</form>
+			
+		</div>
+	</div>
+	<footer class="page-footer blue" style="padding-top:0px;">
+          <div class="footer-copyright blue">
+            <div class="container">
+			Copyright &copy; IEEE-JUIT.
+            <a class="grey-text text-lighten-4 right" href="#!"></a>
+            </div>
+          </div>
+        </footer>
 	<!--JAVASCRIPT-->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
@@ -197,13 +235,27 @@
 					scrollTop: $("#myDiv").offset().top
 				}, 2000);
 			});
+			setTimeout(function() {
 			*/
-		    setTimeout(function() {
 		    $('.modal-trigger').leanModal();
 			$(".button-collapse").sideNav();
 			$('.parallax').parallax();
 			$('input#input_text, textarea#textarea1').characterCounter();
 			$('select').not('.disabled').material_select();
+		});
+		$(function() {
+			$('a[href*="#"]:not([href="#"])').click(function() {
+				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+					if (target.length) {
+						$('html, body').animate({
+							scrollTop: target.offset().top
+						}, 200);
+						return false;
+					}
+				}
+			});
 		});
 	</script>
 	
