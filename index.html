@@ -39,7 +39,10 @@
 		margin-top: 5px;
 		margin-bottom: 0;
 	}
-	</style>
+	h3{
+		margin: 2rem 0 1.424rem 0;
+	}
+    </style>
 	
 	
 </head>
@@ -59,7 +62,9 @@
 			<ul class="side-nav" id="mobile-demo">
 				<li><a href="#home">Home</a></li>
 				<li><a href="#intro">Introduction</a></li>
-				<li><a href="#events">Events</a></li>
+				<li class="hide-on-med-and-up"><a href="#events-mobile">Events</a></li>
+				<li class="hide-on-small-only"><a href="#events">Events</a></li>
+				
 				<li><a href="#contact">Contact Us</a></li>
 				<li><a class="modal-trigger blue white-text" href="#register">Register</a></li>
 			</ul>			
@@ -155,15 +160,17 @@
 		<div class="parallax" id="mesh"></div>
     </div>
 	
-	<div class="parallax-container" id="intro">
+	<div class="parallax-container valign-wrapper" id="intro">
 		<div class="container row">
-            <h2 class="header">Introduction</h2>
-			<p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h3 class="header">Introduction</h3>
+			<p class="flow-text">The IEEE student chapter of the IEEE Student Branch, Jaypee University of Information Technology, Waknaghat, is organising "Research and Development Expo (R&D Expo)" on May 7, 2016. This exhibition is aimed at stimulating and fostering student research. It would provide a forum for exchange of new ideas highlighting the student research accomplishments. It welcomes all the research work, paper and project presentation.</p>
 		</div>
 	</div>
-	<div class="parallax-container blue" id="events">
+	<div class="parallax-container hide-on-small-only valign wrapper" id="events">
 		<div class="container row">
-            <div class="col s4">
+            <h3 class="header white-text">Events</h3>
+		
+			<div class="col s4">
 				<div class="center event event-example">
 					<i class="material-icons">assessment</i>
 					<p class="event-caption">Paper Presentation</p>
@@ -174,23 +181,50 @@
 				<div class="center event event-example">
 					<i class="material-icons">visibility</i>
 					<p class="event-caption">Project Expo</p>
-					<p class="light center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+					<p class="light center">The projects will be chosen based on technical merit, interest, applicability, and how well they fit a coherent and balanced technical program. Projects can be submitted in teams.</p>
 				</div>
             </div>
             <div class="col s4">
 				<div class="center event event-example">
-				
 					<i class="material-icons">error</i>
 					<p class="event-caption">Event 3</p>
 					<p class="light center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-				
 				</div>
             </div>
 		</div>
+		<div class="parallax"><img src="img/bg1.jpg"></img></div>
+	</div>
+	<div class="parallax-container hide-on-med-and-up" style="height:auto;" id="events-mobile">
+	<div class="container">
+		<h3 class="header white-text">Events</h3>
+		<div class="row center event event-example">
+			
+				<i class="material-icons">assessment</i>
+				<p class="event-caption">Paper Presentation</p>
+				<p class="light center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+			
+		</div>
+		<div class="row center event event-example">
+				<i class="material-icons">visibility</i>
+				<p class="event-caption">Project Expo</p>
+				<p class="light center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+			
+		</div>
+		<div class="row center event event-example">
+			
+			
+				<i class="material-icons">error</i>
+				<p class="event-caption">Event 3</p>
+				<p class="light center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+			
+			
+		</div>
+	</div>
+	<div class="parallax"><img src="img/bg2.jpg"></img></div>
 	</div>
 	<div class="parallax-container" id="contact">
-		<div class="container row">
-            <h2 class="header">Contact Us</h2>
+		<div class="container row" style="padding-top:15px;">
+            <h3 class="header">Contact Us</h3>
 
 			<form class="col s12">
 				<div class="col s9">
@@ -207,7 +241,7 @@
 				</div>
 				<div class="input-field col s12">
 					<textarea id="content" class="materialize-textarea"></textarea>
-					<label for="content">Message</label>
+					<label for="content" style="padding-left:10px;">Message</label>
 				</div>
 				<div class="input-field col s12">
 					<a class="btn-large blue white-text waves-effect waves-light">Send</a>
@@ -225,9 +259,9 @@
           </div>
         </footer>
 	<!--JAVASCRIPT-->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
-	<script type="text/javascript" src="https://goo.gl/cCLgOU"></script>
+	<script type="text/javascript" src="js/mesh.js"></script>
 	<script>
 		$(document).ready(function(){
 			/*$("#button").click(function() {
@@ -250,7 +284,7 @@
 					target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 					if (target.length) {
 						$('html, body').animate({
-							scrollTop: target.offset().top
+							scrollTop: target.offset().top-56
 						}, 200);
 						return false;
 					}
